@@ -1,0 +1,13 @@
+{
+  "name": "MoveApp Clarify + Twilio",
+  "description": "Record the contents of boxes with voice, then search for them later.",
+  "repository": "https://github.com/grahamc/clarify-twilio-moving-app",
+  "website": "https://developer.clarify.io",
+  "env": {
+    "CLARIFY_API_KEY": {
+      "description": "Your Clarify.io API Key which can be gotten from https://developer.clarify.io",
+      "required": true
+    }
+  }
+}
+
