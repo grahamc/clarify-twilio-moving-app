@@ -2,7 +2,7 @@
 
 require 'config.php';
 
-$query = $_REQUEST['Body'];
+$query = preg_replace("/[^A-Za-z ]/", "", $_REQUEST['Body']);
 
 $names = $clarify->searchForBoxes($query);
 

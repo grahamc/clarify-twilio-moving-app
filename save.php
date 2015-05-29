@@ -2,8 +2,14 @@
 
 require 'config.php';
 
-$number = $_GET['d'];
+$number = (int)$_GET['d'];
 $url = $_POST['RecordingUrl'];
+
+if (filter_var($url, FILTER_VALIDATE_URL) === false) {
+  echo xml();
+  echo '<Response><Say>Invalid URL.</Say></Response>';
+  die();
+}
 
 $clarify->saveBoxIDWithMedia($number, $url);
 
